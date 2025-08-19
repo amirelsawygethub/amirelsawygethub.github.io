@@ -3,204 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Learning & Innovation Consultant</title>
+    <title>Amir El Sawy</title>
     <style>
-        /* Basic reset */
-        body, h1, h2, h3, p, ul {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f7f7f7;
         }
-        a {
-            color: #0066cc;
+        /* Skip link styles for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #f1f1f1;
+            color: #333;
+            padding: 8px 16px;
+            z-index: 100;
             text-decoration: none;
         }
-        a:hover {
+        .skip-link:focus {
+            top: 0;
+        }
+        /* Sticky navigation bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
             text-decoration: underline;
         }
         /* Hero section */
         .hero {
             position: relative;
-            /* Background image referencing the decorative abstract graphic */
-            /* Updated to new hero image */
-            background-image: url('hero_bg.png');
+            background-image: url('https://amirelsawygethub.github.io/assets/hero-background.jpg');
             background-size: cover;
             background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: #fff;
             text-align: center;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1;
-        }
-        .hero-content {
-            z-index: 2;
-            max-width: 800px;
-            padding: 20px;
+            padding: 120px 20px;
         }
         .hero h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-            line-height: 1.2;
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
         }
         .hero p {
-            font-size: 1.2em;
-            margin-bottom: 1em;
+            font-size: 1.25em;
+            margin-bottom: 0.8em;
         }
+        /* Generic container */
         .container {
-            width: 90%;
-            max-width: 1100px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 40px 0;
+            padding: 40px 20px;
         }
+        /* Section styling */
         section {
             margin-bottom: 40px;
         }
-        h2 {
+        section h2 {
             font-size: 2em;
             margin-bottom: 0.5em;
-            color: #1f5174;
+            text-align: center;
         }
-        h3 {
-            font-size: 1.6em;
-            margin-bottom: 0.3em;
-            color: #1f5174;
-        }
-        .about p {
-            margin-bottom: 1em;
-        }
-        .services ul {
-            list-style: disc inside;
-            margin-left: 20px;
-        }
-        .services li {
+        section h3 {
+            font-size: 1.5em;
+            margin-top: 1em;
             margin-bottom: 0.5em;
         }
-        .contact {
-            background-color: #e9f3f8;
-            padding: 30px;
-            border-radius: 8px;
+        /* Portfolio cards */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        /* Contact */
         .contact p {
             margin-bottom: 0.8em;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <!-- Personalise the hero section with your name and a concise descriptor -->
-            <h1>Amir El Sawy</h1>
-            <p>Educational Technology &amp; Innovation Consultant<br>Digital Content Creator | AI Teaching Specialist | Researcher</p>
-            <a href="#contact" style="background:#1f5174;color:#fff;padding:10px 20px;border-radius:5px;font-size:1em;display:inline-block;">Contact Me</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container about">
-        <h2>About Me</h2>
-        <p>I am an educational technology expert and technology‑enhanced instructor with extensive experience designing and delivering digital learning solutions for higher education and corporate training. As a PhD candidate and content creator, I apply research‑informed strategies to develop engaging courses and training programmes that leverage artificial intelligence and innovative instructional design.</p>
-        <p>With a passion for faculty development and leadership, I support educators and instructional designers in integrating digital tools into their practice, fostering inclusive and effective learning experiences. My work spans curriculum development, AI‑driven teaching consultancy, and strategic innovation management.</p>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="container services">
-        <h2>Services</h2>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <nav class="navbar" aria-label="Primary Navigation">
         <ul>
-            <li><strong>Digital Content Development:</strong> Design and produce custom e‑learning modules, interactive simulations and multimedia courses tailored to your organisation’s needs.</li>
-            <li><strong>AI‑Driven Teaching Consultancy:</strong> Integrate artificial intelligence into curriculum design to personalise learning pathways and enhance student engagement.</li>
-            <li><strong>Training Programme Design & Delivery:</strong> Develop comprehensive training programmes for educators and corporate teams, including needs assessments, curriculum planning and workshop facilitation.</li>
-            <li><strong>Research & Academic Writing:</strong> Provide expertise in educational research, academic paper writing and publication support, ensuring evidence‑based practice.</li>
-            <li><strong>Innovation Management:</strong> Guide organisations in adopting innovative technologies and methodologies for sustainable digital transformation.</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
+    <main id="main">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1>Amir El Sawy</h1>
+            <p>Educational Technology & Innovation Consultant<br>
+            Digital Content Creator | AI Teaching Specialist | Researcher</p>
+        </header>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="container portfolio">
-        <h2>Selected Projects</h2>
-        <p>As a consultant, I have partnered with universities, NGOs and corporate clients to implement digital learning initiatives that improve learner outcomes and operational efficiency. My projects include:</p>
-        <ul>
-            <li>Developing AI‑powered online courses for instructor training programmes.</li>
-            <li>Creating multilingual digital content for corporate leadership development.</li>
-            <li>Designing blended learning curricula for undergraduate and postgraduate programmes.</li>
-            <li>Consulting on innovation strategies for educational technology start‑ups.</li>
-        </ul>
-        <p><em>More case studies and details available upon request.</em></p>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>I am an educational technology expert and technology‑enhanced instructor with extensive experience in digital content development, AI‑driven teaching consultancy, and strategic innovation management. I support organisations and institutions in achieving success through bespoke e‑learning solutions and AI‑enhanced teaching models.</p>
+        </section>
 
-    <!-- Insights Section -->
-    <section id="insights" class="container insights">
-        <h2>Featured Blog Posts</h2>
-        <p>Discover some of my latest insights into digital learning and innovation. Click “Read More” to dive deeper into each topic.</p>
-        <!-- Feature the blockchain article -->
-        <div class="insight">
-            <h3><a href="posts/blockchain-education.html" style="color:#1f5174;">Blockchain in Education: Secure Records &amp; Decentralised Credentials</a></h3>
-            <small>May 2024</small>
-            <p>An overview of how blockchain technology is reshaping academic records and credentialing. The article covers market growth, key use cases and the benefits and challenges of adopting decentralised ledgers in education.</p>
-            <a href="posts/blockchain-education.html" style="background:#1f5174;color:#fff;padding:8px 16px;border-radius:4px;display:inline-block;margin-top:10px;">Read More</a>
-        </div>
-        <!-- Feature the EdTech growth article -->
-        <div class="insight">
-            <h3><a href="posts/digital-learning-growth.html" style="color:#1f5174;">EdTech Growth in the Middle East &amp; Africa</a></h3>
-            <small>June 2025</small>
-            <p>The Middle East and Africa are rapidly becoming hubs for education technology innovation. This article explores key market statistics, drivers of growth and the implications for learners and organisations.</p>
-            <a href="posts/digital-learning-growth.html" style="background:#1f5174;color:#fff;padding:8px 16px;border-radius:4px;display:inline-block;margin-top:10px;">Read More</a>
-        </div>
-        <!-- Feature the micro‑credentials article -->
-        <div class="insight">
-            <h3><a href="posts/micro-credentials-future.html" style="color:#1f5174;">Micro‑Credentials &amp; Digital Badges: Flexible Pathways to Lifelong Learning</a></h3>
-            <small>August 2024</small>
-            <p>Discover why micro‑credentials and digital badges are gaining momentum and how they offer learners and employers more agile ways to recognise and build skills.</p>
-            <a href="posts/micro-credentials-future.html" style="background:#1f5174;color:#fff;padding:8px 16px;border-radius:4px;display:inline-block;margin-top:10px;">Read More</a>
-        </div>
-        <p><em>Explore more insights on the <a href="blog.html">blog page</a>.</em></p>
-    </section>
+        <!-- Services Section -->
+        <section id="services" class="container">
+            <h2>Services</h2>
+            <h3>Digital Content Development</h3>
+            <p>Design and produce custom e‑learning modules, interactive simulations and multimedia courses tailored to your organisation’s needs.</p>
 
-    <!-- Awards Section -->
-    <section id="awards" class="container awards">
-        <h2>Awards & Recognition</h2>
-    <p>Selected by the UNESCO Institute for Lifelong Learning to join the Egyptian delegation for the international workshop <em>Strengthening the Digital Competencies of Adult Educators</em>, held at Shanghai Open University in October 2024. This nomination recognised our national leadership in digital learning and my contributions to Egypt’s digital education strategy.</p>
-    </section>
+            <h3>AI‑Driven Teaching Consultancy</h3>
+            <p>Integrate artificial intelligence into curriculum design to personalise learning pathways and enhance student engagement.</p>
 
-    <!-- Publications Section -->
-    <section id="publications" class="container publications">
-        <h2>Research & Publications</h2>
-    <p>I actively contribute to the scholarly discourse on educational technology and innovation. Selected publications and contributions include:</p>
-    <ul>
-        <li><a href="https://library.iated.org/view/VYORTKINA2024ASY" target="_blank" rel="noopener">Co‑author of “A Systematic Professional Development Framework for Enhancing ICT Skills in the Teacher Education Faculty” (EDULEARN24 Proceedings, 2024)</a></li>
-        <li><a href="https://library.iated.org/view/ELSAWY2024WHA" target="_blank" rel="noopener">Lead author of “What’s in Your Toolkit? Integrating Instructional Design Principles and Technologies for Effective Teaching: A professional development series for university faculty in Egypt” (EDULEARN24 Proceedings, 2024)</a></li>
-        <li><a href="https://middleeasteducationreform-thinkt.weebly.com/" target="_blank" rel="noopener">Contributor to the Middle East Education Reform &amp; Think Tanks blog, sharing perspectives on digital learning and policy</a></li>
-    </ul>
-    <p>For a comprehensive list of my research papers and collaborative projects, please contact me directly.</p>
-    </section>
+            <h3>Innovation & Strategy</h3>
+            <p>Guide schools and companies in adopting technology solutions to improve performance and outcomes.</p>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container contact">
-        <h2>Contact</h2>
-        <p>I welcome inquiries and collaborations from educational institutions, organisations and individuals seeking to innovate their learning and development efforts.</p>
-        <p>Email: <a href="mailto:amirelsawy@aucegypt.edu">Amir Elsawy</a></p>
-        <!-- Updated LinkedIn link to direct visitors to the correct profile -->
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/amirielsawy/">Connect with me</a></p>
-    </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Description of project one. It’s an example of digital content creation.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of project two. It highlights AI‑driven teaching solutions.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of project three. It demonstrates innovation & strategy.</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- Insights Section -->
+        <section id="insights" class="container">
+            <h2>Insights</h2>
+            <h3>Bridging the Digital Divide</h3>
+            <p>An exploration of equitable access to digital education and strategies for inclusive learning environments.</p>
+            <h3>AI in Education</h3>
+            <p>A deep dive into the transformative power of AI in personalising the learning experience and boosting student engagement.</p>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards" class="container">
+            <h2>Awards & Recognition</h2>
+            <p>Selected by the UNESCO Institute for Lifelong Learning to lead the Egyptian delegation for the international workshop <em>Strengthening the Digital Competences of Educators</em>.</p>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="container">
+            <h2>Research & Publications</h2>
+            <p>I actively contribute to the scholarly discourse on educational technology and innovation. Selected publications and contributions include:</p>
+            <ul>
+                <li><a href="https://library.iated.org/view/YYORKTINKA2024ASAY" target="_blank" rel="noopener">Co‑author of “A Systematic Professional Development Framework for AI in Education”</a></li>
+                <li><a href="https://library.iated.org/view/ELSAVY2024AiwaH" target="_blank" rel="noopener">Lead author of “What’s in Your Toolkit? Integrating Instructional Design with AI Tools”</a></li>
+                <li><a href="https://middleeasteducationreform-thinkt.weebly.com/" target="_blank" rel="noopener">Contributor to the Middle East Education Reform &amp; Think Tank</a></li>
+            </ul>
+            <p>For a comprehensive list of my research papers and publications, please contact me directly.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container contact">
+            <h2>Contact</h2>
+            <p>I welcome inquiries and collaborations from institutions, organisations and individuals seeking to innovate their learning and development practices.</p>
+            <p>Email: <a href="mailto:amirelsawy@aucegypt.edu">amirelsawy@aucegypt.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/amirielsawy/" target="_blank" rel="noopener">Connect with me</a></p>
+        </section>
+    </main>
+    <!-- Footer -->
     <footer style="background:#1f5174;color:#fff;text-align:center;padding:20px 0;">
-        <p>&copy; 2025 Amir El Sawy. All rights reserved. <a href="https://www.linkedin.com/in/amirielsawy/" style="color:#fff;">LinkedIn</a></p>
+        <p>©2025 Amir El Sawy. All rights reserved. | <a href="https://www.linkedin.com/in/amirielsawy/" style="color:#fff;" target="_blank" rel="noopener">LinkedIn</a></p>
     </footer>
 </body>
 </html>
