@@ -1,0 +1,5 @@
+/* This file disables Jekyll processing on GitHub Pages.
+ * We include it to ensure that our static HTML files are served as-is
+ * without being processed by Jekyll. This helps ensure our website
+ * reflects the latest changes across all pages.
+ */
