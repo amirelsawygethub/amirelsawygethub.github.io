@@ -194,7 +194,13 @@
     <section id="contact" class="container contact">
         <h2>Contact</h2>
         <p>I welcome inquiries and collaborations from educational institutions, organisations, and individuals seeking to innovate their learning and development efforts.</p>
-        <p>Email: amirelsawy@aucegypt.edu</p>
+        <p>Click to copy my email: 
+  <span id="copyText" style="color: #007BFF; cursor: pointer; text-decoration: underline;">
+    amirelsawy@aucegypt.edu
+  </span>
+</p>
+
+<p id="copyMessage" style="color: green; display: none;">Copied to clipboard!</p>
         <!-- Updated LinkedIn link to direct visitors to the correct profile -->
         <p>LinkedIn: <a href="https://www.linkedin.com/in/amirelsawy/">Linkedin</a></p>
     </section>
@@ -202,5 +208,22 @@
     <footer style="background:#1f5174;color:#fff;text-align:center;padding:20px 0;">
         <p>&copy; 2025 Amir El Sawy. All rights reserved. <a href="https://www.linkedin.com/in/amirielsawy/" style="color:#fff;">LinkedIn</a></p>
     </footer>
+<script>
+const copyText = document.getElementById("copyText");
+const copyMessage = document.getElementById("copyMessage");
+
+copyText.addEventListener("click", () => {
+  // Copy text to clipboard
+  navigator.clipboard.writeText(copyText.textContent)
+    .then(() => {
+      // Show confirmation message
+      copyMessage.style.display = "inline";
+      setTimeout(() => copyMessage.style.display = "none", 2000); // hide after 2s
+    })
+    .catch(err => {
+      console.error("Failed to copy: ", err);
+    });
+});
+</script>
 </body>
 </html>
